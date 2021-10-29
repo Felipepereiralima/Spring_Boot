@@ -28,7 +28,7 @@ public class Postagem {
 	
 	@NotNull(message = "O atribuito título é obrigatório")
 	@Size(min= 5, max = 100, message = "O atribuito título deve conter no mínimo 5 e no máximo 100 caracteres")
-	private String título;
+	private String titulo;
 	
 	@NotBlank(message = "O atribuito título é obrigatorio")
 	@Size (min= 10, max = 1000, message = "O atribuito título deve conter no mínimo 10 e no máximo 1000 caracteres")
@@ -45,12 +45,12 @@ public class Postagem {
 		this.id = id;
 	}
 
-	public String getTítulo() {
-		return título;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setTítulo(String título) {
-		this.título = título;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public String getTexto() {
@@ -68,6 +68,7 @@ public class Postagem {
 	public void setData(Date data) {
 		this.data = data;
 	}
+
 	
 	
 }
