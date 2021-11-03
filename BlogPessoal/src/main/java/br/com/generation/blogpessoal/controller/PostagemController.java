@@ -1,7 +1,6 @@
 package br.com.generation.blogpessoal.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.generation.blogpessoal.model.Postagem;
 import br.com.generation.blogpessoal.repository.PostagemRepository;
 
@@ -43,12 +41,12 @@ public class PostagemController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Postagem> post (@RequestBody Postagem postagem){
+	public ResponseEntity<Postagem> postPostagem (@RequestBody Postagem postagem){
 		return ResponseEntity.status(HttpStatus.CREATED).body(postagemRepository.save(postagem));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Postagem> put (@RequestBody Postagem postagem){
+	public ResponseEntity<Postagem> putPostagem (@RequestBody Postagem postagem){
 		return ResponseEntity.status(HttpStatus.OK).body(postagemRepository.save(postagem));
 	}
 	
@@ -56,5 +54,6 @@ public class PostagemController {
 	public void delete(@PathVariable long id) {
 		postagemRepository.deleteById(id);
 	}
+	
 	
 }
