@@ -17,7 +17,7 @@ import br.com.generation.minhalojadegames.model.ProdutoModel;
 import br.com.generation.minhalojadegames.repository.ProdutoRepository;
 
 @RestController
-@RequestMapping("/postagens")
+@RequestMapping("/produto")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 	
